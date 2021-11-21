@@ -11,19 +11,20 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      theme: ThemeData.dark().copyWith(
-        colorScheme: const ColorScheme.light(
-          primary: Colors.purple,
-        ),
-        scaffoldBackgroundColor: Colors.red,
-      ),
-      // theme: ThemeData(
-      //   primaryColor: Colors.purple,
-      //   colorScheme: ColorScheme.fromSwatch(primarySwatch: Colors.red)
-      //       .copyWith(secondary: Colors.green),
-      //   scaffoldBackgroundColor: Colors.red[100],
-      //   fontFamily: 'Times New Roman',
+      // theme: ThemeData.dark().copyWith(
+      //   colorScheme: const ColorScheme.light(
+      //     primary: Colors.purple,
+      //   ),
+      //   scaffoldBackgroundColor: Colors.red,
       // ),
+      theme: ThemeData(
+        primaryColor: Colors.purple,
+        appBarTheme: const AppBarTheme(color: Colors.orange),
+        colorScheme: ColorScheme.fromSwatch(primarySwatch: Colors.red)
+            .copyWith(secondary: Colors.green),
+        scaffoldBackgroundColor: Colors.red[100],
+        fontFamily: 'Times New Roman',
+      ),
       initialRoute: RouteManager.homepage,
       onGenerateRoute: RouteManager.generateRoute,
     );
